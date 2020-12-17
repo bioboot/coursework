@@ -1,0 +1,23 @@
+Package: coursework
+Type: Package
+Title: Help Manage Barry's Courses 
+Version: 0.1.0
+Authors@R: 
+    person(given = "Barry",
+           family = "Grant",
+           role = c("aut", "cre"),
+           email = "bjgrant@ucsd.edu",
+           comment = c(ORCID = "MY-ORCID-ID"))
+Description: Helps read and manage online gradebook, merge 
+    quiz and other homework restuls, automate sending emails to 
+    all students, determine letter grade, and other useful 
+    course managment tasks.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports: 
+    googledrive,
+    googlesheets4,
+    stringr,
+    readr
