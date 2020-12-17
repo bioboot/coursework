@@ -4,11 +4,11 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of coursework is to help manage Barry's boring coursework logistics. For now this includes adding to the online gradebook (a google sheet). Merging homework and quiz results to this gradebook. Sending results emails and of course assigning letter grades. etc.
+The goal of coursework (a.k.a. "gradesheet") is to help manage Barry's boring coursework logistics. For now this includes adding to the online gradebook (a google sheet). Merging homework and quiz results from other sources to this gradebook. Sending automated results emails, assigning letter grades, and other such logistical nonsense.
 
 ## Installation
 
-You can install the development version of coursework from [GitHub](https://CRAN.R-project.org) with:
+This package is not on CRAN nor will it ever likely be. You can install the development version from [GitHub](https://CRAN.R-project.org) with:
 
 ``` r
 devtools::install_github("bioboot/coursework")
@@ -16,7 +16,7 @@ devtools::install_github("bioboot/coursework")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows how to read the course gradebook, add some homework, and determine overall letter grade from a precentage:
 
 ``` r
 library(coursework)
