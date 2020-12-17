@@ -21,3 +21,5 @@ Imports:
     googlesheets4,
     stringr,
     readr
+URL: https://github.com/bioboot/coursework
+BugReports: https://github.com/bioboot/coursework/issues
