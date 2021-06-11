@@ -72,6 +72,7 @@ gradebook_read <- function(file.pattern="eGrade-BIMM143_S20", write.local.csv=FA
 
   # Check sheet name(s)
   #gs
+  if(nrow(gs) == 0) { stop("File not found: please check filename")}
 
   # Our forml sheet will start with "eGrade" at the name begining
   gradebook_sheet <- gs[ grep("^eGrade",gs$name), ]
