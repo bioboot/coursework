@@ -68,14 +68,17 @@ gradebook_read <- function(file.pattern="eGrade-BIMM143_S20", write.local.csv=FA
 
 
   # Find our sheet
-  gs <- googledrive::drive_find(pattern = file.pattern, type = "spreadsheet")
+  gs <- googledrive::drive_find(pattern = file.pattern, type = "spreadsheet", orderBy = "name")
+
 
   # Check sheet name(s)
   #gs
   if(nrow(gs) == 0) { stop("File not found: please check filename")}
+  #if(nrow(gs) >  1) { warning("More than one matching file found")}
 
-  # Our forml sheet will start with "eGrade" at the name begining
-  gradebook_sheet <- gs[ grep("^eGrade",gs$name), ]
+  # Our forml sheet will start with "eGrade" at the name begining 
+  #  (note [1] here to pick first file by name due to 'orderBy' parm above)
+  gradebook_sheet <- gs[ grep("^eGrade",gs$name)[1], ]
   cat("  Working with remote sheet:", gradebook_sheet$name, "with ID", gradebook_sheet$id, "\n")
 
   # Read the sheet onetime to find number of assignments
